@@ -32,12 +32,9 @@ from bitshares.account import Account
 from bitshares.blockchain import Blockchain
 # bitshares.org/technology/industrial-performance-and-scalability/
 
+VERSION = 'microDEX v0.00000013 - low latency minimalist UI'
+
 def version():
-
-    global VERSION
-
-    VERSION = 'microDEX v0.00000013 - low latency minimalist UI'
-
     sys.stdout.write('\x1b]2;' + VERSION + '\x07')  # terminal #title
 
 def constants():

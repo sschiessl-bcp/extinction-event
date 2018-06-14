@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 import sys
 
-__VERSION__ = '0.13'
+__VERSION__ = '0.14'
 
 assert sys.version_info[0] == 3, "We require Python > 3"
 
@@ -29,7 +29,9 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'microDEX = microDEX.microDEX:main'
+            'microDEX = microDEX.microDEX:main',
+            'EV = EV.EV:main',
+            'metaNODE = metaNODE.metaNODE:main'
         ],
     },
     install_requires=open('requirements.txt').read().split(),

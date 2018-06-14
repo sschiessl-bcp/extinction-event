@@ -41,6 +41,8 @@ from multiprocessing import Process, Value, Array
 # Google Agorism
 SATOSHI = 0.00000001
 ANTISAT = 1 / SATOSHI
+VERSION = 'EXTINCTION EVENT v0.00000005 beta-alt-alt-meta'
+
 
 def banner():
 
@@ -292,11 +294,6 @@ def banner():
     '''
 
 def version():
-
-    global VERSION
-    #===================================================================
-    VERSION = 'EXTINCTION EVENT v0.00000005 beta-alt-alt-meta'
-    #===================================================================
     print ('Python3 and Linux Required; your system:', sys.version.split(' ')[0], sys.platform)
     sys.stdout.write('\x1b]2;' + VERSION + '\x07')
     print('')

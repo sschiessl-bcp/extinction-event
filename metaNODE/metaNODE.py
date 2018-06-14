@@ -26,6 +26,8 @@ try:
 except:
     raise ValueError('pip install websocket-client')
 
+VERSION = 'v0.00000010'
+
 
 def banner():
     print("\033c")
@@ -1156,19 +1158,15 @@ Bitshares Trustless Client  (_   \(_   _).'   `.(_   _ `.(_   __  \
  (  \/  )( ___)(_  _) /  \    | |\ \| | | |   | | | |  | | |  _) _
   )    ( | __)   ||  / <> \  _| |_\   |_\  `-'  /_| |_.' /_| |__/ |
  (_/\/\_)(____) (__)(__)(__)(_____|\____)`.___.'(______.'(________/
-                                                        ''' + version)
+                                                        ''' + VERSION)
              
     print(y)
     print(z)
 
 def version():
 
-    global VERSION, version
-
-    version = 'v0.00000010'
-    VERSION = 'metaNODE ' + version + ' - Bitshares Trustless Client'
-
-    sys.stdout.write('\x1b]2;' + VERSION + '\x07')  # terminal #title
+    to_print = 'metaNODE ' + VERSION + ' - Bitshares Trustless Client'
+    sys.stdout.write('\x1b]2;' + to_print + '\x07')  # terminal #title
 
 def main(): # script primary backbone
 
